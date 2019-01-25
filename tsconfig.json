@@ -1,13 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "target": "es2015",
+    "allowJs": false,
+    "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -17,9 +12,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "typeRoots": ["node_modules/@types", "./typings"],
+    "lib": ["dom", "dom.iterable", "esnext"]
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"],
+  "exclude": ["build", "node_modules/**/*.ts", "coverage", "**/*.d.ts"]
 }

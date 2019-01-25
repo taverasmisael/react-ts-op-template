@@ -1,0 +1,17 @@
+{
+  "linters": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.+(ts|tsx)": [
+      "npm run lint -- --"
+    ],
+    "*.+(js|jsx|ts|tsx)": [
+      "cross-env CI=true npm run test -- --bail --findRelatedTests"
+    ],
+    "*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
