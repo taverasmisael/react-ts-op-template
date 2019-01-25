@@ -17,5 +17,11 @@
     "lib": ["dom", "dom.iterable", "esnext"]
   },
   "include": ["src"],
-  "exclude": ["build", "node_modules/**/*.ts", "coverage", "**/*.d.ts"]
+  "exclude": [
+    "build",
+    "node_modules/**/*.ts",
+    "coverage",
+    "**/*.d.ts",
+    ".storybook/**/*.ts"
+  ]
 }

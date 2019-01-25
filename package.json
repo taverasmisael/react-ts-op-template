@@ -13,10 +13,21 @@
     "typescript": "3.2.4"
   },
   "devDependencies": {
-    "@types/jest": "23.3.13",
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-info": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/addon-storyshots": "^4.1.11",
+    "@storybook/addons": "^4.1.11",
+    "@storybook/react": "^4.1.11",
+    "@types/jest": "^23.3.13",
     "@types/node": "10.12.18",
     "@types/react": "16.7.20",
     "@types/react-dom": "16.0.11",
+    "@types/storybook__addon-storyshots": "^3.4.4",
+    "@types/storybook__react": "^4.0.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.5",
     "cross-env": "^5.2.0",
     "eslint-config-prettier": "^3.6.0",
     "eslint-plugin-prettier": "^3.0.1",
@@ -25,6 +36,10 @@
     "jest-emotion": "^10.0.6",
     "lint-staged": "^8.1.0",
     "prettier": "^1.16.1",
+    "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "react-test-renderer": "^16.7.0",
+    "require-context.macro": "^1.0.4",
+    "ts-jest": "^23.10.5",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^3.6.0"
@@ -40,7 +55,9 @@
     "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:watch": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "test:debug": "react-scripts --inspect-brk test --runInBand"
+    "test:debug": "react-scripts --inspect-brk test --runInBand",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "husky": {
     "hooks": {
